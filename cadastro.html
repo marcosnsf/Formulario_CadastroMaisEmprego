@@ -1,0 +1,439 @@
+﻿<?php
+    
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+    </head>
+    <body>
+       
+        <form method="post"  onsubmit="ValidateForm(); return false"class="container contact-form">
+            <div>
+                <link  rel = "stylesheet" type = "text/css" href = 'form2.css'>
+                <div class="contact-image">
+                    <img src= "logo-prefeitura.png" alt="rocket_contact"/>
+                </div>               
+                    <h2  id="titulo"><center> <img src="logo.png" alt="" id="img_pat"></center></h2>
+                    <br>
+                   
+            </div>
+            <div class="container">
+                <div class="row" >
+                    <div class="col-md-6" align = "center">
+                        
+                        <div class="div-grupo" >   
+                            <div class="form-group" style="margin-top: 12%;">
+                                <div class="perguntas">
+
+                                        <label for="nome"></label>
+                                        <input name="nome" id="" type="text" class="form-controldadosgrande fonte" placeholder="Nome*" required/>
+                                        <label for="email"></label>
+                                        <input name="email" id="" type="text" class="form-controldadosgrande fonte" placeholder="Email*" required/>
+                                        <label for ='fixo'></label>
+                                        <input name="fixo" type="tel"  id="fixo"class="form-controldados fonte" maxlength="13" placeholder="Telefone fixo" onkeydown="javascript: fMasc( this, mTel )" >
+                                        <label for ='tel'></label>
+                                        <input name="tel" type="tel" id="tel" class="form-controldados fonte" maxlength="15" placeholder="Celular"  onkeydown="javascript: fMasc( this, mTel )">
+                                        <label for="cpf"></label>
+                                        <input name="cpf" id="" type="text" class="form-controldados fonte" maxlength="14" placeholder="CPF*" onkeydown="javascript: fMasc( this, mCPF );" required/>
+                                        <label for="Cep"></label><input name="Cep" id="cep" type="text"  class="form-controldados fonte" placeholder="CEP*" required/>
+                                        <label for="logradouro"></label>
+                                        <input name="logradouro" id="logradouro" type="text" class="form-controldados fonte" placeholder="Logradouro*" required/>
+                                        <label for="bairro"></label>
+                                        <input name="bairro" id="bairro" type="text" class="form-controldados fonte" placeholder="Bairro*" required/>
+                                        <label for="cidade"></label>
+                                        <input name="cidade" id="cidade" type="text" class="form-controldados fonte" placeholder="cidade*" required/>
+                                        <label for="numero"></label>
+                                        <input name="numero" id="numero" type="text" class="form-controldados fonte"placeholder="Numero da casa*"required/>
+                                         <label for="complemento"></label>
+                                        <input name="complemento" id="fonte" type="text" class="form-controldados fonte" placeholder="Complemento(opcional)"/> 
+                                        <label for="estado"></label>
+                                        <select name="estado" class="form-controlselect fonte" id="estado">
+                                            <option value="#">SELECIONE UM ESTADO</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapa</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceara</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espirito Santo</option>
+                                            <option value="GO">Goias</option>
+                                            <option value="MA">Maranhao</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Para</option>
+                                            <option value="PB">Paraiba</option>
+                                            <option value="PR">Parana</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piaui</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondonia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">Sao Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </select> 
+                                        <label for="funcao"></label>
+                                        <select name="funcao" class="form-controlselect fonte" id="funcao">
+                                            <option value="Sem cargo escolhido">SELECIONE A FUNÇÃO DESEJADA</option>
+                                            <option value="Administrador(a)">Administrador(a)</option>
+                                            <option value="Advogado(a)">Advogado(a)</option>
+                                            <option value="Analista">Analista</option>
+                                            <option value="Arquiteto(a)">Arquiteto(a)</option>
+                                            <option value="Assistente">Assistente</option>
+                                            <option value="Atendente Social">Atendente Social</option>
+                                            <option value="Ator, Atriz">Ator, Atriz</option>
+                                            <option value="Auditor(a)">Auditor(a)</option>
+                                            <option value="Auxiliar de Limpeza">Auxiliar de Limpeza</option>
+                                            <option value="Bancário(a)">Bancário(a)</option>
+                                            <option value="Biomédico(a)">Biomédico(a)</option>
+                                            <option value="Biólogo(a)">Biólogo(a)</option>
+                                            <option value="Bombeiro(a), Salva-Vidas">Bombeiro(a), Salva-Vidas</option>
+                                            <option value="Cabeleireiro, Manicure, Esteticista">Cabeleireiro, Manicure, Esteticista</option>
+                                            <option value="Comerciário(a)">Comerciário(a)</option>
+                                            <option value="Consultor(a)">Consultor(a)</option>
+                                            <option value="Contador(a)">Contador(a)</option>
+                                            <option value="Corretora(a)">Corretora(a)</option>
+                                            <option value="Corretor(a) de imovél">Corretor(a) de imóvel</option>
+                                            <option value="Cozinheiro(a),chef">Cozinheiro(a),chef</option>
+                                            <option value="Dançarino(a)">Dançarino(a)</option>
+                                            <option value="Decorador(a)">Decorador(a)</option>
+                                            <option value="Dentista">Dentista</option>
+                                            <option value="Designer">Designer</option>
+                                            <option value="Diretor(a)">Diretor(a)</option>
+                                            <option value="Eletricista">Eletricista</option>
+                                            <option value="Encanador(a)">Encanador(a)</option>
+                                            <option value="Enfermeiro(a)">Enfermeiro(a)</option>
+                                            <option value="Engenheiro(a)">Engenheiro(a)</option>
+                                            <option value="Escritor(a)">Escritor(a)</option>
+                                            <option value="Farmacêutico(a)">Farmacêutico(a)</option>
+                                            <option value="Fisioterapeuta">Fisioterapeuta</option>
+                                            <option value="Fonoaudiólogo(a)">Fonoaudiólogo(a)</option>
+                                            <option value="Fotógrafo(a)">Fotógrafo(a)</option>
+                                            <option value="Gari">Gari</option>
+                                            <option value="Jornalista">Jornalista</option>
+                                            <option value="Juiz(a), Desembargador(a)">Juiz(a), Desembargador(a)</option>
+                                            <option value="Marceneiro(a), Serralheiro(a)">Marceneiro(a), Serralheiro(a)</option>
+                                            <option value="Mecânico(a) em geral">Mecânico(a) em geral</option>
+                                            <option value="Modelo">Modelo</option>
+                                            <option value="Motorista">Motorista</option>
+                                            <option value="Médico">Médico</option>
+                                            <option value="Médico(a) veterinário(a)">Médico(a) veterinário(a)</option>
+                                            <option value="Músico(a)">Músico(a)</option>
+                                            <option value="Operador(a)de telemarketing">Operador(a)de telemarketing</option>
+                                            <option value="Pedreiro(a)">Pedreiro(a)</option>
+                                            <option value="Pintor(a)">Pintor(a)</option>
+                                            <option value="Porteiro(a), Zelador(a)">Porteiro(a), Zelador(a)</option>
+                                            <option value="Procurador(a)">Procurador(a)</option>
+                                            <option value="Produtor(a) de eventos">Produtor(a) de eventos</option>
+                                            <option value="Produtor(a) digital">Produtor(a) digital</option>
+                                            <option value="Professor(a)">Professor(a)(Especifique)</option>
+                                            <option value="Profissional de Educação">Profissional de Educação(Especifique)</option>
+                                            <option value="Profissional de Saúde">Profissional de Saúde(Especifique)</option>
+                                            <option value="Profissional da área de comunicação">Profissional da área de comunicação (Especifique)</option>
+                                            <option value="Profissional da área de lógistica">Profissional da área de lógistica (Especifique)</option>
+                                            <option value="Profissional da área de serviços funerários">Profissional da área de serviços funerários</option>
+                                            <option value="Profissional de saúde">Profissional de saúde</option>
+                                            <option value="Psicólogo(a)">Psicólogo(a)</option>
+                                            <option value="Químico(a)">Químico(a)</option>
+                                            <option value="Representante comercial">Representante comercial</option>
+                                            <option value="Secretário(a),Recepcionista">Secretário(a),Recepcionista</option>
+                                            <option value="Segurança, Vigilante">Segurança, Vigilante</option>
+                                            <option value="Sociólogo(a)">Sociólogo(a)</option>
+                                            <option value="Supervisor(a)">Supervisor(a)</option>
+                                            <option value="Tabelião(ã), Cartorário(a)">Tabelião(ã), Cartorário(a)</option>
+                                            <option value="Tapeceiro(a)">Tapeceiro(a)</option>
+                                            <option value="Terapeuta ocupacional">Terapeuta ocupacional</option>
+                                            <option value="Tecnologia da Informações">Tecnologia da Informação(Especifique)</option>
+                                            <option value="Trabalhador(a) doméstica(a), Diarista">Trabalhador(a) doméstica(a), Diarista</option>
+                                            <option value="Treinador(a)">Treinador(a)</option>
+                                            <option value="Tradutor(a), Intérprete">Tradutor(a), Intérprete</option>
+                                            <option value="Turismólogo">Turismólogo</option>
+                                            <option value="Vendedor(a) autônomo">Vendedor(a) autônomo</option>
+                                            <option value="Vidraceiro(a)">Vidraceiro(a)</option>
+                                            <option value="Outros">Outros...</option>
+                                        </select> 
+                                        <input name="outros" id="numero" type="text" class="form-controldados fonte"placeholder="Se selecionou outros, qual função?"/>
+                                    </div>  
+                                    <div class="perguntas2 ">   
+                                        <p id="span_file">   
+                                            <input type="file" name="file1" id="file1" class="inputfile" />
+                                            <label for="file1">Anexar Curriculo</label>
+                                                
+                                            <span id="file-upload-value1" class="span_file">Ao anexar, colocar o arquivo com nome e cargo desejado (ex:Pedro Silva_Motorista.docx)</span>
+                                            
+                                        </p> 
+                                        <!-- <p id="span_file">   
+                                            <input type="file" name="file2" id="file2" class="inputfile" />
+                                        <label for="file2">Anexar Curriculo</label>
+                                            
+                                        <span id="file-upload-value2" class="span_file">Ao anexar, colocar o arquivo com nome e cargo desejado (ex:Pedro Silva_Motorista.docx)</span>
+                                            
+                                        </p>  -->
+                                        <textarea name="resumo" id="resumo" class="textarea_resumo"  cols="30" rows="10" maxlength="500" placeholder="Faça um breve resumo sobre você";></textarea>
+                                    </div>   
+                                       
+                                  
+                               
+                            </div>  
+                             
+                        </div>
+                            <!-- fim div Grupo -->
+                
+                        <div class="btnEnviar">
+                            <input type="submit" style = "font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:16px;" id="btnEnviar" name="btnSubmit" class=" btnContact" value="Salvar"/>
+                        </div>
+                    </div>
+                
+                </div>  
+            </div>
+
+          
+            
+        </form>
+    </body>
+</html>
+
+
+<script type="text/javascript">
+ //
+
+ $("#cep").focusout(function(){
+		//Início do Comando AJAX
+		$.ajax({
+			//O campo URL diz o caminho de onde virá os dados
+			//É importante concatenar o valor digitado no CEP
+			url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+			//Aqui você deve preencher o tipo de dados que será lido,
+			//no caso, estamos lendo JSON.
+			dataType: 'json',
+			//SUCESS é referente a função que será executada caso
+			//ele consiga ler a fonte de dados com sucesso.
+			//O parâmetro dentro da função se refere ao nome da variável
+			//que você vai dar para ler esse objeto.
+			success: function(resposta){
+				//Agora basta definir os valores que você deseja preencher
+				//automaticamente nos campos acima.
+				$("#logradouro").val(resposta.logradouro);
+				$("#complemento").val(resposta.complemento);
+				$("#bairro").val(resposta.bairro);
+				$("#cidade").val(resposta.localidade);
+                 $("#estado").val(resposta.uf);
+				//Vamos incluir para que o Número seja focado automaticamente
+				//melhorando a experiência do usuário
+				$("#numero").focus();
+                $("#complemento").focus();
+			}
+		});
+}); 
+//
+
+
+function fMasc(objeto,mascara) {
+				obj=objeto
+				masc=mascara
+				setTimeout("fMascEx()",1)
+			}
+			function fMascEx() {
+				obj.value=masc(obj.value)
+			}
+			function mTel(tel) {
+				tel=tel.replace(/\D/g,"")
+				tel=tel.replace(/^(\d)/,"($1")
+				tel=tel.replace(/(.{3})(\d)/,"$1)$2")
+				if(tel.length == 9) {
+					tel=tel.replace(/(.{1})$/,"-$1")
+				} else if (tel.length == 10) {
+					tel=tel.replace(/(.{2})$/,"-$1")
+				} else if (tel.length == 11) {
+					tel=tel.replace(/(.{3})$/,"-$1")
+				} else if (tel.length == 12) {
+					tel=tel.replace(/(.{4})$/,"-$1")
+				} else if (tel.length > 12) {
+					tel=tel.replace(/(.{4})$/,"-$1")
+				}
+				return tel;
+			}
+			function mCNPJ(cnpj){
+				cnpj=cnpj.replace(/\D/g,"")
+				cnpj=cnpj.replace(/^(\d{2})(\d)/,"$1.$2")
+				cnpj=cnpj.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")
+				cnpj=cnpj.replace(/\.(\d{3})(\d)/,".$1/$2")
+				cnpj=cnpj.replace(/(\d{4})(\d)/,"$1-$2")
+				return cnpj
+			}
+			function mCPF(cpf){
+				cpf=cpf.replace(/\D/g,"")
+				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+				cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+				cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+				return cpf
+			}
+			function mCEP(cep){
+				cep=cep.replace(/\D/g,"")
+				cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
+				cep=cep.replace(/\.(\d{3})(\d)/,".$1-$2")
+				return cep
+			}
+			function mNum(num){
+				num=num.replace(/\D/g,"")
+				return num
+			}
+
+    function ValidateForm(){
+        var pessoa = {
+            nome : document.getElementsByName("nome")[0].value,
+            email : document.getElementsByName("email")[0].value,  
+            fixo : document.getElementsByName("fixo")[0].value,
+            tel : document.getElementsByName("tel")[0].value,
+            cpf : document.getElementsByName("cpf")[0].value,
+            Cep : document.getElementsByName("Cep")[0].value,
+            logradouro : document.getElementsByName("logradouro")[0].value,
+            bairro : document.getElementsByName("bairro")[0].value,
+            cidade : document.getElementsByName("cidade")[0].value,
+            numero : document.getElementsByName("numero")[0].value,
+            complemento : document.getElementsByName("complemento")[0].value,
+            estado : document.getElementsByName("estado")[0].value,
+            funcao : document.getElementsByName("funcao")[0].value,
+            outros : document.getElementsByName("outros")[0].value
+}
+
+        console.log(pessoa);
+
+        var resposta = {
+            resumo :  document.getElementById("resumo").value,
+           
+        }
+
+        console.log(resposta);
+
+        Submit(pessoa, resposta);
+    }
+
+    function Submit(pessoa, resposta){
+
+        var envio = {
+                    "Nome" : pessoa.nome,
+                    "Email" : pessoa.email,
+                    "Fixo" : pessoa.fixo,
+                    "Tel" : pessoa.tel,
+                    "Cpf" : pessoa.cpf,
+                    "Cep" : pessoa.Cep,
+                    "Logradouro" : pessoa.logradouro,
+                    "Bairro" : pessoa.bairro,
+                    "Cidade" : pessoa.cidade,
+                    "Numero" : pessoa.numero,
+                    "Complemento":pessoa.complemento,
+                    "Estado" : pessoa.estado,
+                    "Funcao" : pessoa.funcao,
+                    "Outros" : pessoa.outros,
+                    "Resumo" : resposta.resumo 
+                }
+
+        $.ajax({
+            url : "formulario.php",
+            type: "post",
+            dataType: 'text',
+            contentType: 'application/json',
+            data : JSON.stringify(envio)
+        }).done(function(response){
+                if(response == 1)
+                {
+                    alert("Cadastrado com sucesso!");
+                    location.reload();//recarrega a pagina
+                    location.replace("cadastro.html");//redireciona
+                }
+                else
+                {
+                    alert(response);
+                }
+        }).fail(function (jqXHR, textStatus){
+            alert("Houve algum problema em nosso sistema, por favor, tente novamente mais tarde.");
+            console.log(textStatus);
+        });
+        
+    }
+    function selecionado(radios){
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+            return radios[i].value;
+            }
+        }
+    }
+
+    //
+  
+//Uploads de arquivos
+$('#btnEnviar').click(function () {
+    var form = new FormData();
+    var file = document.getElementById('file1').files[0];
+        form.append('file1', file);
+
+    $.ajax({
+        url: 'uploads.php', // Url do lado server que vai receber o arquivo
+        data: form,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function (data) {
+            // utilizar o retorno
+            console.log(data)
+            if(data == "OK") {
+                alert('CURRICULO CADASTRADO COM SUCESSO !')
+            } else {
+                alert(data);
+            }
+        }
+    });
+});
+$('#btnEnviar').click(function () {
+    var form = new FormData();
+    var file = document.getElementById('file2').files[0];
+        form.append('file2', file);
+
+    $.ajax({
+        url: 'uploads2.php', // Url do lado server que vai receber o arquivo
+        data: form,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function (data) {
+            // utilizar o retorno
+            console.log(data)
+            if(data == "OK") {
+                alert('CURRICULO CADASTRADO COM SUCESSO !')
+            } else {
+                alert(data);
+            }
+        }
+    });
+});
+//Uploads de arquivos//
+
+    
+
+    
+    //Input 1
+    $(function() {       
+        $("input:file[id=file1]").change(function() {
+        $("#file-upload-value1").html( $(this).val() );
+    });
+});
+  //Input 1
+    $(function() {       
+        $("input:file[id=file2]").change(function() {
+        $("#file-upload-value2").html( $(this).val() );
+    });
+});
+ //   
+</script>
